@@ -1,0 +1,43 @@
+﻿@model Uc_4_Antonia_Clinica.Models.Medico
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Consulta Detalhada</h1>
+
+<div>
+    <h4>Médico</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Especialidade)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Especialidade)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CRM)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CRM)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.MedicoId">Editar</a> |
+    <btn><a asp-action="Index">Consulta</a></btn>|
+    <a asp-controller="Home" asp-action="Financeiro">Painel Geral</a>
+</div>

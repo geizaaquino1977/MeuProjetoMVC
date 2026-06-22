@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Guia de Autorização</title>
+    <link rel="stylesheet" href="/css/site.css">
+    <style>
+        /* ===== AJUSTE SIMPLES DO FORMULÁRIO ===== */
+
+        /* aumenta largura do formulário */
+        .secao {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+            /* deixa os campos maiores */
+            .secao input {
+                width: 100%;
+                max-width: 100%;
+                padding: 12px;
+                font-size: 16px;
+            }
+
+            /* melhora espaçamento */
+            .secao label {
+                display: block;
+                margin-bottom: 5px;
+                margin-top: 15px;
+            }
+
+            /* botão mais bonito */
+            .secao .btn {
+                width: 100%;
+                margin-top: 20px;
+                padding: 12px;
+                font-size: 16px;
+            }
+
+        /* centraliza melhor o bloco */
+        .container {
+            margin-top: 40px;
+        }
+
+        
+    </style>
+</head>
+
+<body>
+
+    
+    <!-- CONTEÚDO -->
+    <div class="container">
+
+        <h1 class="titulo">Guia de Autorização</h1>
+
+        <div class="secao">
+            <h2>Solicitar Autorização</h2>
+
+            <form>
+
+                <label>Paciente</label>
+                <input type="text" placeholder="Digite o nome do paciente">
+
+                <label>Convênio</label>
+                <input type="text" placeholder="Ex: Unimed, Amil">
+
+                <label>Número da Carteirinha</label>
+                <input type="text" placeholder="Número do convênio">
+
+                <label>Procedimento</label>
+                <input type="text" placeholder="Consulta, exame, cirurgia...">
+
+                <label>Data da Solicitação</label>
+                <input type="date">
+
+                <button class="btn">Solicitar Autorização</button>
+
+            </form>
+            <a asp-controller="Home" asp-action="Financeiro">Painel Geral</a>
+        </div>
+
+    <!-- RODAPÉ -->
+    
+
+</body>
+</html>

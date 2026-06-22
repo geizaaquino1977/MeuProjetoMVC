@@ -1,0 +1,57 @@
+﻿@model Uc_4_Antonia_Clinica.Models.FolhaPagamentoViewModel
+
+<h1>Folha de Pagamento</h1>
+
+<hr />
+
+<h2>Funcionários</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Cargo</th>
+            <th>Email</th>
+            <th>Salário</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var f in Model.Funcionarios)
+        {
+            <tr>
+                <td>@f.Nome</td>
+                <td>@f.Cargo</td>
+                <td>@f.Email</td>
+                <td>R$ 2.500,00</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<hr />
+
+<h2>Médicos</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Especialidade</th>
+            <th>Email</th>
+            <th>Salário</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var m in Model.Medicos)
+        {
+            <tr>
+                <td>@m.Nome</td>
+                <td>@m.Especialidade</td>
+                <td>@m.Email</td>
+                <td>R$ 8.000,00</td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,181 @@
+﻿@model Uc_4_Antonia_Clinica.Models.FolhaPagamentoViewModel
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Clínica Bem Estar</title>
+    <link rel="stylesheet" href="/css/clinica.css">
+    <h1>Folha de Pagamento - Funcionários</h1>
+</head>
+
+
+
+<body>
+
+  
+    Nome:
+    <input type="text" id="nome">
+    <br>
+    <br>
+    Cargo:
+    <input type="text" id="cargo">
+    <br>
+    <br>
+    Email:
+    <input type="text" id="email">
+    <br>
+    <br>
+    Salário:
+    <input type="number" id="salario">
+    <br>
+    <br>
+
+    <button onclick="salvarFuncionario()">Salvar</button>
+
+    <hr>
+
+    <table border="1" width="100%">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Cargo</th>
+                <th>Email</th>
+                <th>Salário</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+
+        <tbody id="tabela"></tbody>
+    </table>
+
+    <br>
+
+    <button onclick="calcularTotal()">Calcular Total</button>
+    <p id="total"></p>
+
+    <hr>
+
+    <h2>ContraCheque</h2>
+    <div id="contracheque" style="border:1px solid black; padding:10px;">
+        Clique em um funcionário
+    </div>
+
+    <a class="btn-voltar" href="/Home/Financeiro">Voltar</a>
+
+    <script>
+
+        let indexEditando = -1;
+
+        window.onload = carregar;
+
+        function salvarFuncionario() {
+
+        let nome = document.getElementById("nome").value;
+        let cargo = document.getElementById("cargo").value;
+        let email = document.getElementById("email").value;
+        let salario = document.getElementById("salario").value;
+
+        let lista = JSON.parse(localStorage.getItem("funcionarios")) || [];
+
+        if (indexEditando >= 0) {
+            lista[indexEditando] = {nome, cargo, email, salario};
+            indexEditando = -1;
+        } else {
+            lista.push({nome, cargo, email, salario});
+        }
+
+        localStorage.setItem("funcionarios", JSON.stringify(lista));
+
+        limpar();
+        carregar();
+        }
+
+        function carregar() {
+
+        let tabela = document.getElementById("tabela");
+        tabela.innerHTML = "";
+
+        let lista = JSON.parse(localStorage.getItem("funcionarios")) || [];
+
+        lista.forEach((f, i) => {
+
+        let linha = tabela.insertRow();
+
+        linha.innerHTML =
+        "<td onclick='abrirContraCheque(\""+f.nome+"\",\""+f.cargo+"\",\""+f.salario+"\")' style='cursor:pointer;color:blue'>"+f.nome+"</td>" +
+        "<td>"+f.cargo+"</td>" +
+        "<td>"+f.email+"</td>" +
+        "<td>"+f.salario+"</td>" +
+        "<td>" +
+        "<button onclick='editar("+i+")'>Editar</button> " +
+        "<button onclick='excluir("+i+")'>Excluir</button>" +
+        "</td>";
+        });
+        }
+
+        function editar(i) {
+
+        let lista = JSON.parse(localStorage.getItem("funcionarios"));
+
+        let f = lista[i];
+
+        document.getElementById("nome").value = f.nome;
+        document.getElementById("cargo").value = f.cargo;
+        document.getElementById("email").value = f.email;
+        document.getElementById("salario").value = f.salario;
+
+        indexEditando = i;
+        }
+
+        function excluir(i) {
+
+        let lista = JSON.parse(localStorage.getItem("funcionarios"));
+
+        lista.splice(i, 1);
+
+        localStorage.setItem("funcionarios", JSON.stringify(lista));
+
+        carregar();
+        }
+
+        function abrirContraCheque(nome, cargo, salario) {
+
+        let inss = salario * 0.08;
+        let liquido = salario - inss;
+
+        document.getElementById("contracheque").innerHTML =
+        "Nome: " + nome + "<br>" +
+        "Cargo: " + cargo + "<br>" +
+        "Bruto: R$ " + salario + "<br>" +
+        "INSS: R$ " + inss + "<br>" +
+        "Líquido: R$ " + liquido;
+        }
+
+        function calcularTotal() {
+
+        let lista = JSON.parse(localStorage.getItem("funcionarios")) || [];
+
+        let total = 0;
+
+        lista.forEach(f => total += parseFloat(f.salario));
+
+        document.getElementById("total").innerText =
+        "Total: R$ " + total;
+        }
+
+        function limpar() {
+
+        document.getElementById("nome").value = "";
+        document.getElementById("cargo").value = "";
+        document.getElementById("email").value = "";
+        document.getElementById("salario").value = "";
+
+        indexEditando = -1;
+        }
+
+    </script>
+    <a asp-controller="Home" asp-action="Financeiro">Painel Geral</a>
+
+</body>
+</html>

@@ -1,0 +1,163 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Clínica Bem Estar</title>
+
+    <link rel="stylesheet" href="/css/site.css">
+
+   <style> {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    }
+
+    /* FUNDO */
+    body{
+    height:100vh;
+    
+    }
+
+    /* CAMADA TRANSPARENTE 
+    .overlay{
+    width:100%;
+    height:100%;
+    background-color: rgba(255,255,255,0.6);
+    text-align:center;
+    padding-top:60px;
+            }*/
+
+    /* TITULO */
+    h1{
+    font-size:60px;
+    color:#3f73b8;
+    margin-bottom:50px;
+    letter-spacing:3px;
+    }
+
+    /* MENU */
+    .nav{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+    }
+
+    .nav a{
+    text-decoration:none;
+    color:white;
+    background:#4f7fb1;
+    padding:10px 20px;
+    display:block;
+    }
+
+    /* DROPDOWN */
+    .dropdown{
+    position:relative;
+    }
+
+    .dropdown-content{
+    display:none;
+    position:absolute;
+    background:#e6e6e6;
+    min-width:150px;
+    text-align:left;
+    }
+
+    .dropdown-content a{
+    color:black;
+    padding:10px;
+    display:block;
+    }
+
+    /* HOVER */
+    .dropdown:hover .dropdown-content{
+    display:block;
+    }
+
+    .nav a:hover{
+    background:#3f73b8;
+    }
+    </style>
+</head>
+
+
+
+<body>
+
+    <div class="overlay">
+
+        <h1>CLINICA BEM ESTAR</h1>
+
+        <div class="nav">
+
+            <a href="#">Home</a>
+
+            <div class="dropdown">
+                <a href="#">Paciente</a>
+                <div class="dropdown-content">
+                    <a asp-controller="Pacientes" asp-action="Index">Consultar</a>
+                    <a asp-controller="Pacientes" asp-action="Create">Cadastrar</a>
+                    
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <a href="#">Médico</a>
+                <div class="dropdown-content">
+                    <a asp-controller="Medicos" asp-action="Index">Consultar</a>
+                    <a asp-controller="Medicos" asp-action="Create">Cadastrar</a>
+                  
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <a href="#">Agendamento</a>
+                <div class="dropdown-content">
+                    <a asp-controller="Consultas" asp-action="Index">Consultar</a>
+                    <a asp-controller="Consultas" asp-action="Create">Cadastrar</a>
+                    
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <a href="#">Funcionário</a>
+                <div class="dropdown-content">
+                    <a asp-controller="Funcionarios" asp-action="Index">Consultar</a>
+                    <a asp-controller="Funcionarios" asp-action="Create">Cadastrar</a>
+                    
+                </div>
+            </div>
+
+            <!-- NOVOS MENUS -->
+            <div class="dropdown">
+                <a href="#">Notificações</a>
+                <div class="dropdown-content">
+                    <a asp-controller="Notificacao" asp-action="AvisoConsulta">Avisos</a>
+                    <a asp-controller="Notificacao" asp-action="Lembrete">Lembretes</a>
+                   
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <a href="#">Folha</a>
+                <div class="dropdown-content">
+                    <a asp-controller="FolhaPagamento" asp-action="Funcionario">Funcionario</a>
+                    <a asp-controller="FolhaPagamento" asp-action="Medico">Lembrete</a>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <a href="#">Convênio</a>
+                <div class="dropdown-content">
+                    <a asp-controller="Convenio" asp-action="Autorizacao">Autorização</a>
+                    <a asp-controller="Convenio" asp-action="Plano">Planos</a>
+                   
+                </div>
+            
+
+    </div>
+
+</body>
+</html>

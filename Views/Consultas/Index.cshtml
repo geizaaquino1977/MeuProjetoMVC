@@ -1,0 +1,90 @@
+﻿@model IEnumerable<Uc_4_Antonia_Clinica.Models.Consulta>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<link rel="stylesheet" href="/css/site.css">
+
+
+<h1>Consultas agendadas</h1>
+<form asp-action="Index" method="get-3 shadow-sm rounded">
+
+
+    <div class="position-relative">
+
+        <input type="text"
+               class="form-control border-end-0"
+               name="searchString"
+               placeholder="🔍 Pesquisar consulta..."
+               aria-label="Pesquisar consulta">
+
+
+        <button type="submit"
+                class="btn btn-sm btn-primary position-absolute top-40 end-10 translate-middle-y me-2">
+            Buscar
+        </button>
+
+    </div>
+    <p></p>
+</form>
+
+<p>
+    <a asp-action="Create">Novo Cadastro</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.DataConsulta)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Valor_Consulta)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Paciente)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Medico)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Funcionario)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataConsulta)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Valor_Consulta)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Paciente.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Medico.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Funcionario.Nome)
+            </td>
+                <td>
+                    <div class="d-flex gap-1">
+                    <a asp-action="Edit" asp-route-id="@item.ConsultaId" class="btn btn-warning btn">Editar</a> 
+                    <a asp-action="Details" asp-route-id="@item.ConsultaId" class="btn btn-info btn-sm">Detalhes</a> 
+                    <a asp-action="Delete" asp-route-id="@item.ConsultaId" class="btn btn-danger bt">Excluir</a>
+                    </div>
+
+            </td>
+        </tr>
+            
+}
+    </tbody>
+</table>
+<div>
+
+
+    <a asp-controller="Home" asp-action="Financeiro">Painel Geral</a>
+</div>

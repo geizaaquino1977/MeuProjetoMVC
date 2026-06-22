@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Agenda do Dia</title>
+    <link rel="stylesheet" href="/css/clinica.css">
+</head>
+
+<body>
+
+    <h1>📅 Agenda / Lembretes</h1>
+
+    <h3>Adicionar tarefa</h3>
+
+    Tarefa:
+    <input type="text" id="tarefa">
+    <br>
+    <br>
+    Data:
+    <input type="date" id="data">
+    <br>
+    <br>
+
+    <button onclick="adicionarTarefa()">Adicionar</button>
+
+    <hr>
+
+    <h2>Minhas Tarefas</h2>
+
+    <table border="1" width="100%">
+        <thead>
+            <tr>
+                <th>Tarefa</th>
+                <th>Data</th>
+                <th>Status</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+
+        <tbody id="tabela"></tbody>
+    </table>
+
+    <hr>
+    <div><a asp-controller="Home" asp-action="Financeiro">Painel Geral</a></div>
+    <script>
+
+        // carregar ao abrir
+        window.onload = carregarTarefas;
+
+        // ADICIONAR
+        function adicionarTarefa() {
+
+        let tarefa = document.getElementById("tarefa").value;
+        let data = document.getElementById("data").value;
+
+        let lista = JSON.parse(localStorage.getItem("tarefas")) || [];
+
+        lista.push({tarefa, data, concluida: false});
+
+        localStorage.setItem("tarefas", JSON.stringify(lista));
+
+        // limpar campos ✅
+        document.getElementById("tarefa").value = "";
+        document.getElementById("data").value = "";
+
+        carregarTarefas();
+        }
+
+        // MOSTRAR TAREFAS
+        function carregarTarefas() {
+
+        let tabela = document.getElementById("tabela");
+        tabela.innerHTML = "";
+
+        let lista = JSON.parse(localStorage.getItem("tarefas")) || [];
+
+        lista.forEach((t, i) => {
+
+        let linha = tabela.insertRow();
+
+        let status = t.concluida ? "✅ Concluído" : "⏳ Pendente";
+
+        linha.innerHTML =
+        "<td>" + t.tarefa + "</td>" +
+        "<td>" + t.data + "</td>" +
+        "<td>" + status + "</td>" +
+        "<td>" +
+
+        "<button onclick='marcar("+i+")'>✔</button> " +
+
+        "<button onclick='excluir("+i+")'>🗑</button>" +
+
+        "</td>";
+        });
+        }
+
+        // MARCAR COMO CONCLUÍDO
+        function marcar(i) {
+
+        let lista = JSON.parse(localStorage.getItem("tarefas"));
+
+        lista[i].concluida = true;
+
+        localStorage.setItem("tarefas", JSON.stringify(lista));
+
+        carregarTarefas();
+        }
+
+        // EXCLUIR
+        function excluir(i) {
+
+        let lista = JSON.parse(localStorage.getItem("tarefas"));
+
+        lista.splice(i, 1);
+
+        localStorage.setItem("tarefas", JSON.stringify(lista));
+
+        carregarTarefas();
+        }
+
+    </script>
+
+</body>
+</html>

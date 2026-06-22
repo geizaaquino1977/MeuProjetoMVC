@@ -1,0 +1,184 @@
+﻿
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Clínica Bem Estar</title>
+    <link rel="stylesheet" href="/css/clinica.css">
+    
+    
+    <h1>Folha de Pagamento - Médicos</h1>
+
+</head>
+
+
+
+<body>
+
+
+    <label>Nome:</label>
+    <br>
+    <input type="text" id="nome">
+    <br>
+    
+    <label>Especialidade:</label>
+    <br>
+    <input type="text" id="especialidade">
+    <br>
+    
+    <label>Email:</label>
+    <br>
+    <input type="text" id="email">
+    <br>
+    
+    <label>Salário:</label>
+    <br>
+    <input type="number" id="salario">
+    <br>
+    
+
+    <button onclick="salvarMedico()">Salvar</button>
+
+    <hr>
+
+    <table border="1" width="100%">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Especialidade</th>
+                <th>Email</th>
+                <th>Salário</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+
+        <tbody id="tabela"></tbody>
+    </table>
+
+    <br>
+
+    <button onclick="calcularTotal()">Calcular Total</button>
+    <p id="total"></p>
+
+    <hr>
+
+    <h2>ContraCheque</h2>
+    <div id="contracheque" style="border:1px solid black; padding:10px;">
+        Clique em um médico
+    </div>
+    <a asp-controller="Home" asp-action="Financeiro">Painel Geral</a>
+    <script>
+
+        let indexEditando = -1;
+
+        window.onload = carregar;
+
+        function salvarMedico() {
+
+        let nome = document.getElementById("nome").value;
+        let especialidade = document.getElementById("especialidade").value;
+        let email = document.getElementById("email").value;
+        let salario = document.getElementById("salario").value;
+
+        let lista = JSON.parse(localStorage.getItem("medicos")) || [];
+
+        if (indexEditando >= 0) {
+            lista[indexEditando] = {nome, especialidade, email, salario};
+            indexEditando = -1;
+        } else {
+            lista.push({nome, especialidade, email, salario});
+        }
+
+        localStorage.setItem("medicos", JSON.stringify(lista));
+
+        limpar();
+        carregar();
+        }
+
+        function carregar() {
+
+        let tabela = document.getElementById("tabela");
+        tabela.innerHTML = "";
+
+        let lista = JSON.parse(localStorage.getItem("medicos")) || [];
+
+        lista.forEach((m, i) => {
+
+        let linha = tabela.insertRow();
+
+        linha.innerHTML =
+        "<td onclick='abrirContraCheque(\""+m.nome+"\",\""+m.especialidade+"\",\""+m.salario+"\")' style='cursor:pointer;color:blue'>"+m.nome+"</td>" +
+        "<td>"+m.especialidade+"</td>" +
+        "<td>"+m.email+"</td>" +
+        "<td>"+m.salario+"</td>" +
+        "<td>" +
+        "<button onclick='editar("+i+")'>Editar</button> " +
+        "<button onclick='excluir("+i+")'>Excluir</button>" +
+        "</td>";
+        });
+        }
+
+        function editar(i) {
+
+        let lista = JSON.parse(localStorage.getItem("medicos"));
+
+        let m = lista[i];
+
+        document.getElementById("nome").value = m.nome;
+        document.getElementById("especialidade").value = m.especialidade;
+        document.getElementById("email").value = m.email;
+        document.getElementById("salario").value = m.salario;
+
+        indexEditando = i;
+        }
+
+        function excluir(i) {
+
+        let lista = JSON.parse(localStorage.getItem("medicos"));
+
+        lista.splice(i, 1);
+
+        localStorage.setItem("medicos", JSON.stringify(lista));
+
+        carregar();
+        }
+
+        function abrirContraCheque(nome, esp, salario) {
+
+        let inss = salario * 0.08;
+        let liquido = salario - inss;
+
+        document.getElementById("contracheque").innerHTML =
+        "Nome: " + nome + "<br>" +
+        "Especialidade: " + esp + "<br>" +
+        "Bruto: R$ " + salario + "<br>" +
+        "INSS: R$ " + inss + "<br>" +
+        "Líquido: R$ " + liquido;
+        }
+
+        function calcularTotal() {
+
+        let lista = JSON.parse(localStorage.getItem("medicos")) || [];
+
+        let total = 0;
+
+        lista.forEach(m => total += parseFloat(m.salario));
+
+        document.getElementById("total").innerText =
+        "Total: R$ " + total;
+        }
+
+        function limpar() {
+
+        document.getElementById("nome").value = "";
+        document.getElementById("especialidade").value = "";
+        document.getElementById("email").value = "";
+        document.getElementById("salario").value = "";
+
+        indexEditando = -1;
+        }
+
+    </script>
+
+</body>
+</html>

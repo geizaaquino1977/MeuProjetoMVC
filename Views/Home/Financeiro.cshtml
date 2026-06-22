@@ -1,0 +1,139 @@
+﻿@{
+    ViewData["Title"] = "Menu Principal";
+}
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Clínica Bem Estar</title>
+    <link rel="stylesheet" href="/css/clinica.css">
+    <style>
+
+        body {
+            font-family: Arial;
+            margin: 0;
+            background-color: #f4f6f9;
+        }
+
+        /* TÍTULO 
+        .titulo {
+            text-align: center;
+            padding: 20px;
+            background-color: #4A7DBB;
+            color: white;
+                }*/
+
+        /* MENU */
+        .menu {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 50px;
+        }
+
+        /* CARDS */
+        .card {
+            background: white;
+            width: 220px;
+            height: 140px;
+            margin: 20px;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0px 2px 8px rgba(0,0,0,0.2);
+            transition: 0.3s;
+        }
+
+            .card:hover {
+                transform: scale(1.05);
+            }
+
+            /* LINKS */
+            .card a {
+                text-decoration: none;
+                color: #4A7DBB;
+                font-weight: bold;
+                font-size: 18px;
+            }
+
+        /* SUBMENU */
+        .submenu {
+            margin-top: 10px;
+        }
+
+            .submenu a {
+                display: block;
+                font-size: 14px;
+                margin-top: 5px;
+                color: #333;
+            }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="titulo">
+        <h1> CLÍNICA BEM ESTAR</h1>
+    </div>
+
+    <div class="menu">
+
+        <!-- FOLHA FUNCIONÁRIOS -->
+        <div class="card">
+            <a href="/folhaPagamento/Funcionario">💰 Folha Funcionários</a>
+            
+        </div>
+
+        <!-- FOLHA MÉDICOS -->
+        <div class="card">
+            <a href="/folhaPagamento/medico">🩺 Folha Médicos</a>
+            
+        </div>
+
+        <!-- FUNCIONÁRIOS -->
+        <div class="card">
+            <a href="/Funcionarios/Index">👨‍💼 Consultar Funcionários</a>
+        </div>
+
+        <!-- MÉDICOS -->
+        <div class="card">
+            <a href="/Medicos/Index">👨‍⚕️ Consultar Médicos</a>
+        </div>
+
+        <!-- PACIENTES -->
+        <div class="card">
+            <a href="/Pacientes/Index">🧑Consultar Pacientes</a>
+        </div>
+
+        <!-- CONSULTAS -->
+        <div class="card">
+            <a href="/Consultas/Index">📅 Consultas Agendadas</a>
+        </div>
+
+        <!-- AVISOS -->
+        <div class="card">
+            <a href="/Notificacao/avisoConsulta">📢 Avisos de Consulta</a>
+        </div>
+
+        <!-- AGENDA -->
+        <div class="card">
+            <a href="/Notificacao/Lembrete">📋 Agenda do Dia</a>
+        </div>
+
+        <!-- CONVÊNIOS -->
+        <div class="card">
+            <a href="/Convenio/Plano">🏥 Planos</a>
+        </div>
+
+        <div class="card">
+            <a href="/Convenio/Autorizacao">✅ Autorizações</a>
+        </div>
+
+    </div>
+
+</body>
+</html>

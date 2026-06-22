@@ -1,0 +1,76 @@
+﻿@model IEnumerable<Uc_4_Antonia_Clinica.Models.Paciente>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Consulta</h1>
+
+<form asp-action="Index" method="get-3 shadow-sm rounded">
+
+
+    <div class="position-relative">
+
+        <input type="text"
+               class="form-control border-end-0"
+               name="searchString"
+               placeholder="🔍 Pesquisar médico..."
+               aria-label="Pesquisar médico">
+
+
+        <button type="submit"
+                class="btn btn-sm btn-primary position-absolute top-40 end-10 translate-middle-y me-2">
+            Buscar
+        </button>
+
+    </div>
+    <p></p>
+</form>
+
+
+<p>
+    <a asp-action="Create">Novo Paciente</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Data_Nascimento)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Telefone)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Data_Nascimento)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Telefone)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.PacienteId">Edita</a> |
+                <a asp-action="Details" asp-route-id="@item.PacienteId">Detalhes</a> |
+                <a asp-action="Delete" asp-route-id="@item.PacienteId">Excluir</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+<a asp-controller="Home" asp-action="Financeiro">Painel Geral</a>

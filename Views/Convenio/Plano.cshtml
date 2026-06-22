@@ -1,0 +1,108 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Consulta de Planos</title>
+    <link rel="stylesheet" href="/css/site.css">
+</head>
+
+<body>
+
+
+    <!-- CONTEÚDO -->
+    <div class="container">
+
+        <h1 class="titulo">Planos de Saúde Aceitos</h1>
+
+        <div class="secao">
+
+            <h2>Consulta de Convênios</h2>
+
+            <!-- CAMPO DE BUSCA -->
+            <input type="text" id="buscaPlano" placeholder="Buscar plano de saúde...">
+
+            <!-- TABELA -->
+            <table id="tabelaPlanos" width="100%" border="1" style="background-color:white; margin-top:20px;">
+
+                <tr style="background-color:#5b8db8; color:white;">
+                    <th>Nome do Plano</th>
+                    <th>Tipo</th>
+                    <th>Status</th>
+                </tr>
+
+                <tr><td>Unimed</td><td>Nacional</td><td>Ativo</td></tr>
+                <tr><td>Amil</td><td>Nacional</td><td>Ativo</td></tr>
+                <tr><td>Bradesco Saúde</td><td>Empresarial</td><td>Ativo</td></tr>
+                <tr><td>SulAmérica</td><td>Nacional</td><td>Ativo</td></tr>
+                <tr><td>Hapvida</td><td>Regional</td><td>Ativo</td></tr>
+                <tr><td>NotreDame Intermédica</td><td>Empresarial</td><td>Ativo</td></tr>
+                <tr><td>Porto Seguro</td><td>Empresarial</td><td>Ativo</td></tr>
+                <tr><td>Omint</td><td>Premium</td><td>Ativo</td></tr>
+                <tr><td>Prevent Senior</td><td>Idosos</td><td>Ativo</td></tr>
+                <tr><td>Golden Cross</td><td>Nacional</td><td>Ativo</td></tr>
+                <tr><td>Allianz Saúde</td><td>Empresarial</td><td>Ativo</td></tr>
+                <tr><td>Care Plus</td><td>Premium</td><td>Ativo</td></tr>
+                <tr><td>São Cristóvão Saúde</td><td>Regional</td><td>Ativo</td></tr>
+                <tr><td>Biovida Saúde</td><td>Regional</td><td>Ativo</td></tr>
+                <tr><td>GreenLine</td><td>Regional</td><td>Ativo</td></tr>
+                <tr><td>Medial Saúde</td><td>Regional</td><td>Restrito</td></tr>
+                <tr><td>Assim Saúde</td><td>Regional</td><td>Ativo</td></tr>
+                <tr><td>Santa Helena Saúde</td><td>Regional</td><td>Ativo</td></tr>
+                <tr><td>Intermédica Smart</td><td>Empresarial</td><td>Ativo</td></tr>
+                <tr><td>Amil One</td><td>Premium</td><td>Ativo</td></tr>
+                <tr><td>Unimed Seguros</td><td>Nacional</td><td>Ativo</td></tr>
+                <tr><td>Portomed</td><td>Regional</td><td>Ativo</td></tr>
+                <tr><td>Life Empresarial</td><td>Empresarial</td><td>Ativo</td></tr>
+                <tr><td>Plena Saúde</td><td>Regional</td><td>Ativo</td></tr>
+                <tr><td>Saúde Caixa</td><td>Servidor</td><td>Ativo</td></tr>
+                <tr><td>Cassi</td><td>Funcionários BB</td><td>Ativo</td></tr>
+                <tr><td>Geap Saúde</td><td>Servidor</td><td>Ativo</td></tr>
+                <tr><td>Planserv</td><td>Servidor</td><td>Ativo</td></tr>
+                <tr><td>Fusex</td><td>Militar</td><td>Ativo</td></tr>
+                <tr><td>Cabesp</td><td>Bancários</td><td>Ativo</td></tr>
+
+            </table>
+            <a asp-controller="Home" asp-action="Financeiro">Painel Geral</a>
+        </div>
+       
+
+    </div>
+    
+
+
+    <!-- SCRIPT DA BUSCA -->
+    <script>
+
+        // pega o campo de busca
+        const campoBusca = document.getElementById("buscaPlano");
+
+        // quando digitar
+        campoBusca.addEventListener("keyup", function () {
+
+            // texto digitado (minúsculo)
+            const textoBusca = campoBusca.value.toLowerCase();
+
+            // pega todas as linhas da tabela
+            const linhas = document.querySelectorAll("#tabelaPlanos tr");
+
+            // percorre todas as linhas
+            for (let i = 1; i < linhas.length; i++) {
+
+                const linha = linhas[i];
+
+                const conteudo = linha.textContent.toLowerCase();
+
+                // verifica se contém o texto
+                if (conteudo.includes(textoBusca)) {
+                    linha.style.display = "";
+                } else {
+                    linha.style.display = "none";
+                }
+            }
+        });
+
+    </script>
+   
+
+</body>
+</html>
