@@ -17,7 +17,7 @@ Este é um projeto desenvolvido durante o curso de **FullStack do SENAC Osasco**
 
 ## 📚 Sobre o projeto
 
-Este projeto foi criado com fins educacionais para praticar:
+O projeto é um sistema de atendimento para uma clinica médica e  foi criado com fins educacionais para praticar:
 
 - Estrutura MVC (Model-View-Controller)
 - Criação de páginas dinâmicas
@@ -25,10 +25,6 @@ Este projeto foi criado com fins educacionais para praticar:
 - Boas práticas de desenvolvimento web
 - Organização de código
 
----
 
-## ▶️ Como executar o projeto
 
-1. Clone o repositório:
-```bash
-git clone https://github.com/seu-usuario/seu-repositorio.git
+
