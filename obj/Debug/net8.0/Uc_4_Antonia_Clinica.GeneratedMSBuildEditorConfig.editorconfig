@@ -1,0 +1,173 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = Uc_4_Antonia_Clinica
+build_property.RootNamespace = Uc_4_Antonia_Clinica
+build_property.ProjectDir = C:\Users\antonia.gcaquino\source\repos\Uc_4_Antonia_Clinica\Uc_4_Antonia_Clinica\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\antonia.gcaquino\source\repos\Uc_4_Antonia_Clinica\Uc_4_Antonia_Clinica
+build_property._RazorSourceGeneratorDebug = 
+build_property.EffectiveAnalysisLevelStyle = 8.0
+build_property.EnableCodeStyleSeverity = 
+
+[C:/Users/antonia.gcaquino/source/repos/Uc_4_Antonia_Clinica/Uc_4_Antonia_Clinica/Views/Consultas/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29uc3VsdGFzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/antonia.gcaquino/source/repos/Uc_4_Antonia_Clinica/Uc_4_Antonia_Clinica/Views/Consultas/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29uc3VsdGFzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/antonia.gcaquino/source/repos/Uc_4_Antonia_Clinica/Uc_4_Antonia_Clinica/Views/Consultas/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29uc3VsdGFzXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/antonia.gcaquino/source/repos/Uc_4_Antonia_Clinica/Uc_4_Antonia_Clinica/Views/Consultas/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29uc3VsdGFzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/antonia.gcaquino/source/repos/Uc_4_Antonia_Clinica/Uc_4_Antonia_Clinica/Views/Consultas/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29uc3VsdGFzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/antonia.gcaquino/source/repos/Uc_4_Antonia_Clinica/Uc_4_Antonia_Clinica/Views/Convenio/Autorizacao.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udmVuaW9cQXV0b3JpemFjYW8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/antonia.gcaquino/source/repos/Uc_4_Antonia_Clinica/Uc_4_Antonia_Clinica/Views/Convenio/Plano.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udmVuaW9cUGxhbm8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/antonia.gcaquino/source/repos/Uc_4_Antonia_Clinica/Uc_4_Antonia_Clinica/Views/Financeiros/Financeiro.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmluYW5jZWlyb3NcRmluYW5jZWlyby5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/antonia.gcaquino/source/repos/Uc_4_Antonia_Clinica/Uc_4_Antonia_Clinica/Views/FolhaPagamento/Funcionario.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRm9saGFQYWdhbWVudG9cRnVuY2lvbmFyaW8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/antonia.gcaquino/source/repos/Uc_4_Antonia_Clinica/Uc_4_Antonia_Clinica/Views/FolhaPagamento/Medico.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRm9saGFQYWdhbWVudG9cTWVkaWNvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/antonia.gcaquino/source/repos/Uc_4_Antonia_Clinica/Uc_4_Antonia_Clinica/Views/Funcionarios/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRnVuY2lvbmFyaW9zXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/antonia.gcaquino/source/repos/Uc_4_Antonia_Clinica/Uc_4_Antonia_Clinica/Views/Funcionarios/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRnVuY2lvbmFyaW9zXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/antonia.gcaquino/source/repos/Uc_4_Antonia_Clinica/Uc_4_Antonia_Clinica/Views/Funcionarios/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRnVuY2lvbmFyaW9zXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/antonia.gcaquino/source/repos/Uc_4_Antonia_Clinica/Uc_4_Antonia_Clinica/Views/Funcionarios/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRnVuY2lvbmFyaW9zXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/antonia.gcaquino/source/repos/Uc_4_Antonia_Clinica/Uc_4_Antonia_Clinica/Views/Funcionarios/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRnVuY2lvbmFyaW9zXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/antonia.gcaquino/source/repos/Uc_4_Antonia_Clinica/Uc_4_Antonia_Clinica/Views/Home/Financeiro.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxGaW5hbmNlaXJvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/antonia.gcaquino/source/repos/Uc_4_Antonia_Clinica/Uc_4_Antonia_Clinica/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/antonia.gcaquino/source/repos/Uc_4_Antonia_Clinica/Uc_4_Antonia_Clinica/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/antonia.gcaquino/source/repos/Uc_4_Antonia_Clinica/Uc_4_Antonia_Clinica/Views/Medicos/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVkaWNvc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/antonia.gcaquino/source/repos/Uc_4_Antonia_Clinica/Uc_4_Antonia_Clinica/Views/Medicos/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVkaWNvc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/antonia.gcaquino/source/repos/Uc_4_Antonia_Clinica/Uc_4_Antonia_Clinica/Views/Medicos/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVkaWNvc1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/antonia.gcaquino/source/repos/Uc_4_Antonia_Clinica/Uc_4_Antonia_Clinica/Views/Medicos/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVkaWNvc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/antonia.gcaquino/source/repos/Uc_4_Antonia_Clinica/Uc_4_Antonia_Clinica/Views/Medicos/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVkaWNvc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/antonia.gcaquino/source/repos/Uc_4_Antonia_Clinica/Uc_4_Antonia_Clinica/Views/Notificacao/AvisoConsulta.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTm90aWZpY2FjYW9cQXZpc29Db25zdWx0YS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/antonia.gcaquino/source/repos/Uc_4_Antonia_Clinica/Uc_4_Antonia_Clinica/Views/Notificacao/Lembrete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTm90aWZpY2FjYW9cTGVtYnJldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/antonia.gcaquino/source/repos/Uc_4_Antonia_Clinica/Uc_4_Antonia_Clinica/Views/Notificacao/Mapa.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTm90aWZpY2FjYW9cTWFwYS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/antonia.gcaquino/source/repos/Uc_4_Antonia_Clinica/Uc_4_Antonia_Clinica/Views/Pacientes/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFjaWVudGVzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/antonia.gcaquino/source/repos/Uc_4_Antonia_Clinica/Uc_4_Antonia_Clinica/Views/Pacientes/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFjaWVudGVzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/antonia.gcaquino/source/repos/Uc_4_Antonia_Clinica/Uc_4_Antonia_Clinica/Views/Pacientes/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFjaWVudGVzXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/antonia.gcaquino/source/repos/Uc_4_Antonia_Clinica/Uc_4_Antonia_Clinica/Views/Pacientes/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFjaWVudGVzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/antonia.gcaquino/source/repos/Uc_4_Antonia_Clinica/Uc_4_Antonia_Clinica/Views/Pacientes/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFjaWVudGVzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/antonia.gcaquino/source/repos/Uc_4_Antonia_Clinica/Uc_4_Antonia_Clinica/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/antonia.gcaquino/source/repos/Uc_4_Antonia_Clinica/Uc_4_Antonia_Clinica/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/antonia.gcaquino/source/repos/Uc_4_Antonia_Clinica/Uc_4_Antonia_Clinica/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/antonia.gcaquino/source/repos/Uc_4_Antonia_Clinica/Uc_4_Antonia_Clinica/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/antonia.gcaquino/source/repos/Uc_4_Antonia_Clinica/Uc_4_Antonia_Clinica/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-iwe70f3kkj
