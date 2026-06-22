@@ -26,9 +26,12 @@ O projeto é um sistema de atendimento para uma clinica médica e  foi criado co
 - Organização de código
 
 
-## 🎬 Demonstração do projeto
+
 
 ## 🎬 Demonstração do projeto
+
+<img width="1894" height="918" alt="image" src="https://github.com/user-attachments/assets/f359467d-3dff-4bb6-b999-0644bc153cfe" />
+
 
 https://youtu.be/0_Eglj3xxWM
 
