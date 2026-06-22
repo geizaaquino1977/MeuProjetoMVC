@@ -28,5 +28,7 @@ O projeto é um sistema de atendimento para uma clinica médica e  foi criado co
 
 ## 🎬 Demonstração do projeto
 
-https://img.youtube.com/vi/0_Eglj3xxWM/0.jpg](https://youtu.be/0_Eglj3xxWM)
+## 🎬 Demonstração do projeto
+
+https://youtu.be/0_Eglj3xxWM
 
